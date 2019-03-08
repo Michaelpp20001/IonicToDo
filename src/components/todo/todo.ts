@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { TodoProvider } from '../../providers/todo/todo';
 
 /**
  * Generated class for the TodoComponent component.
@@ -14,7 +15,7 @@ export class TodoComponent {
 
   text: string;
 
-  constructor() {
+  constructor( public _todoServe: TodoProvider) {
     console.log('Hello TodoComponent Component');
     this.text = 'Hello World';
   }

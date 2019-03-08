@@ -5,6 +5,8 @@ import { IonicApp, IonicErrorHandler, IonicModule } from 'ionic-angular';
 import { MyApp } from './app.component';
 import { HomePage } from '../pages/home/home';
 import { ListPage } from '../pages/list/list';
+import { LoginPage } from '../pages/login/login';
+import { RegisterPage } from '../pages/register/register';
 
 import { StatusBar } from '@ionic-native/status-bar';
 import { SplashScreen } from '@ionic-native/splash-screen';
@@ -16,6 +18,8 @@ import { TodoProvider } from '../providers/todo/todo';
     MyApp,
     HomePage,
     ListPage,
+    LoginPage,
+    RegisterPage,
     TodoComponent
   ],
   imports: [
@@ -26,7 +30,9 @@ import { TodoProvider } from '../providers/todo/todo';
   entryComponents: [
     MyApp,
     HomePage,
-    ListPage
+    ListPage,
+    LoginPage,
+    RegisterPage
   ],
   providers: [
     TodoProvider,

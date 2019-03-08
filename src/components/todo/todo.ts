@@ -15,7 +15,7 @@ export class TodoComponent {
 
   text: string;
 
-  constructor( public _todoServe: TodoProvider) {
+  constructor(public _todoServe: TodoProvider) {
     console.log('Hello TodoComponent Component');
     this.text = 'Hello World';
   }

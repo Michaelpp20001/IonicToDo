@@ -29,10 +29,10 @@ import { TodoProvider } from '../providers/todo/todo';
     ListPage
   ],
   providers: [
+    TodoProvider,
     StatusBar,
     SplashScreen,
-    {provide: ErrorHandler, useClass: IonicErrorHandler},
-    TodoProvider
+    {provide: ErrorHandler, useClass: IonicErrorHandler}
   ]
 })
 export class AppModule {}

@@ -20,7 +20,7 @@ export class TodoProvider {
   }
 
   //Simulate POST /todos
-  addTodo(todo: Todo): TodoService {
+  addTodo(todo: Todo): TodoProvider {
     if (!todo.id) {
       todo.id = ++this.lastId;
     }
@@ -30,7 +30,7 @@ export class TodoProvider {
   }
 
   // Simulate DELETE /todos/:id
-  deleteTodoById(id: number): TodoService {
+  deleteTodoById(id: number): TodoProvider {
     this.todos = this.todos
       .filter(todo => todo.id !== id);
     return this;

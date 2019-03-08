@@ -1,5 +1,6 @@
 //import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
+import { Todo } from '../../app/todo';
 
 /*
   Generated class for the TodoProvider provider.

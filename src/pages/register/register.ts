@@ -1,5 +1,6 @@
 import { Component } from '@angular/core';
 import { NavController, NavParams } from 'ionic-angular';
+import { HomePage } from '../../pages/home/home';
 
 /**
  * Generated class for the RegisterPage page.
@@ -23,7 +24,7 @@ export class RegisterPage {
   }
 
   goHome() {
-    this.navCtrl.push('HomePage)';
+    this.navCtrl.setRoot(HomePage);
     // return this._show.showHeader();
   }
 

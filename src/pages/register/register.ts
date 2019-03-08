@@ -22,4 +22,13 @@ export class RegisterPage {
     console.log('ionViewDidLoad RegisterPage');
   }
 
+  goHome() {
+    this.navCtrl.push('HomePage)';
+    // return this._show.showHeader();
+  }
+
+  goBack(){
+    this.navCtrl.pop();
+} 
+
 }

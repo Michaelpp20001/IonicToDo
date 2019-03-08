@@ -23,4 +23,13 @@ export class LoginPage {
     console.log('ionViewDidLoad LoginPage');
   }
 
+  goHome() {
+    this.navCtrl.push('HomePage');
+    // return this._show.showHeader();
+  }
+
+  goBack(){
+    this.navCtrl.pop();
+} 
+
 }

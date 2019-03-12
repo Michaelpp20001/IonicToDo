@@ -2,18 +2,21 @@
 <section class="todoapp">
     <header class="header">
       <h1>Todos</h1>
-      <input class="new-todo" placeholder="What needs to be done?" autofocus="" [(ngModel)]="newTodo.title" (keyup.enter)="addTodo()">
+      <ion-list>
+        <ion-item>
+          <ion-input type="text" class="new-todo" value="" placeholder="What needs to get done?" [(ngModel)]="newTodo.title"></ion-input>
+        </ion-item>
+      </ion-list>
+      <button (click)="addTodo()" ion-button>Add Todo</button>
     </header>
     <section class="main" *ngIf="todos.length > 0">
-      <ul class="todo-list">
-        <li *ngFor="let todo of todos" [class.completed]="todo.complete">
-          <div class="view">
-            <input class="toggle" type="checkbox" (click)="toggleTodoComplete(todo)" [checked]="todo.complete">
-            <label>{{todo.title}}</label>
-            <button class="destroy" (click)="removeTodo(todo)"></button>
-          </div>
-        </li>
-      </ul>
+      <ion-list class="todo-list">
+        <button class="destroy" (click)="removeTodo(todo)" ion-item *ngFor="let todo of todos" [class.completed]="todo.complete">
+            <ion-label>{{todo.title}}</ion-label>
+              <ion-checkbox color="dark" checked="true" (click)="toggleTodoComplete(todo)" [checked]="todo.complete"></ion-checkbox>
+        </button>
+        <!--need to add a delete button to delete a todo, instead of in the "ion-list"-->
+      </ion-list>
     </section>
     <footer class="footer" *ngIf="todos.length > 0">
       <span class="todo-count">
